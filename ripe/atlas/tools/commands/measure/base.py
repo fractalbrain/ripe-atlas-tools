@@ -232,24 +232,19 @@ class Command(BaseCommand):
         )
 
         self.parser.add_argument(
-            "--start-time",
+            "--start",
             type=ArgumentType.datetime,
 			action="append",
 			default=conf["specification"]["times"]["start"],
-			#metavar="start_time",
             help="Specify the start time UTC 2010-10-01T00:00:00 format.",
         )
         self.parser.add_argument(
-            "--stop-time",
+            "--stop",
             type=ArgumentType.datetime,
 			action="append",
 			default=conf["specification"]["times"]["stop"],
-			#metavar="end_time",
             help="Specify the stop time UTC 2010-10-01T00:00:00 format.",
         )
-
-
-
 
 
         Renderer.add_arguments_for_available_renderers(self.parser)
@@ -379,6 +374,11 @@ class Command(BaseCommand):
 
         if self.arguments.resolve_on_probe is not None:
             r["resolve_on_probe"] = self.arguments.resolve_on_probe
+        if self.arguments.start is not None:
+            r["start"] = self.arguments.start
+        if self.arguments.stop is not None:
+            r["stop"] = self.arguments.stop
+
 
         return r
 
