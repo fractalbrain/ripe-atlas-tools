@@ -29,8 +29,8 @@ types = [
 common_differences = {
     "is_oneoff": None,  # implied by lack of --interval
     "type": None,  # set as the subcommand
-#    "start_time": None,  # deliberately unsupported
-#    "stop_time": None,  # deliberately unsupported
+    "start_time": None,  # deliberately unsupported
+	"stop_time": None,  # deliberately unsupported
     "is_public": None,  # deliberately unsupported
     "description": {
         "default": "",
@@ -117,6 +117,8 @@ def compare_type(cmd_name, api_model, expected_differences):
     seen_diffs = False
 
     for field_name, model_field in sorted(api_model["properties"].items()):
+		#ej
+		print(field_name)
         if field_name in expected_differences and expected_differences[field_name] is None:
             continue
         if model_field["readOnly"]:
