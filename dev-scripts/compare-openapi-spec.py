@@ -29,8 +29,8 @@ types = [
 common_differences = {
     "is_oneoff": None,  # implied by lack of --interval
     "type": None,  # set as the subcommand
-    "start_time": None,  # deliberately unsupported
-    "stop_time": None,  # deliberately unsupported
+#    "start_time": None,  # deliberately unsupported
+#    "stop_time": None,  # deliberately unsupported
     "is_public": None,  # deliberately unsupported
     "description": {
         "default": "",
