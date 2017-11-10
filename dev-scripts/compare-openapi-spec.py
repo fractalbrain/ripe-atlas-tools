@@ -118,7 +118,7 @@ def compare_type(cmd_name, api_model, expected_differences):
 
     for field_name, model_field in sorted(api_model["properties"].items()):
 		#ej
-		print(field_name)
+		print("BEEP")
         if field_name in expected_differences and expected_differences[field_name] is None:
             continue
         if model_field["readOnly"]:
