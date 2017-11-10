@@ -314,6 +314,7 @@ class Command(BaseCommand):
             is_oneoff=self._is_oneoff,
 			start_time = conf["specification"]["times"]["start"],
 			stop_time = conf["specification"]["times"]["stop"]
+			print(start_time)
 
         ).create()
 
