@@ -233,14 +233,14 @@ class Command(BaseCommand):
 
         self.parser.add_argument(
             "--start",
-            type=ArgumentType.datetime,
+            type=str,
 			action="append",
 			default=conf["specification"]["times"]["start"],
             help="Specify the start time UTC 2010-10-01T00:00:00 format.",
         )
         self.parser.add_argument(
             "--stop",
-            type=ArgumentType.datetime,
+            type=str,
 			action="append",
 			default=conf["specification"]["times"]["stop"],
             help="Specify the stop time UTC 2010-10-01T00:00:00 format.",
