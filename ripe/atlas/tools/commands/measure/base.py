@@ -235,7 +235,7 @@ class Command(BaseCommand):
             "--start-time",
             type=ArgumentType.datetime,
 			action="append",
-			default=conf["specification"]["times"]["start"]
+			default=conf["specification"]["times"]["start"],
 			#metavar="start_time",
             help="Specify the start time UTC 2010-10-01T00:00:00 format.",
         )
@@ -243,7 +243,7 @@ class Command(BaseCommand):
             "--stop-time",
             type=ArgumentType.datetime,
 			action="append",
-			default=conf["specification"]["times"]["stop"]
+			default=conf["specification"]["times"]["stop"],
 			#metavar="end_time",
             help="Specify the stop time UTC 2010-10-01T00:00:00 format.",
         )
