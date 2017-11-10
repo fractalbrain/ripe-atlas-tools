@@ -231,20 +231,20 @@ class Command(BaseCommand):
             help="Causes the target to be resolved by each probe rather than once by the server",
         )
 
-        self.parser.add_argument(
-            "--start-time",
-            type=ArgumentType.datetime,
-			action="append",
-			#metavar="start_time",
-            help="Specify the start time UTC 2010-10-01T00:00:00 format.",
-        )
-        self.parser.add_argument(
-            "--end-time",
-            type=ArgumentType.datetime,
-			action="append",
-			#metavar="end_time",
-            help="Specify the end time UTC 2010-10-01T00:00:00 format.",
-        )
+        # self.parser.add_argument(
+        #     "--start-time",
+        #     type=ArgumentType.datetime,
+		# 	action="append",
+		# 	#metavar="start_time",
+        #     help="Specify the start time UTC 2010-10-01T00:00:00 format.",
+        # )
+        # self.parser.add_argument(
+        #     "--end-time",
+        #     type=ArgumentType.datetime,
+		# 	action="append",
+		# 	#metavar="end_time",
+        #     help="Specify the end time UTC 2010-10-01T00:00:00 format.",
+        # )
 
 
 
