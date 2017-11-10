@@ -128,8 +128,8 @@ class TracerouteMeasureCommand(Command):
             help="Specify the start time UTC 2010-10-01T00:00:00 format.",
         )
         specific.add_argument(
-            "--end-time",
-			default=spec["end_time"],
+            "--stop-time",
+			default=spec["stop_time"],
             type=ArgumentType.datetime,
             help="Specify the end time UTC 2010-10-01T00:00:00 format.",
         )
