@@ -231,20 +231,22 @@ class Command(BaseCommand):
             help="Causes the target to be resolved by each probe rather than once by the server",
         )
 
-        # self.parser.add_argument(
-        #     "--start-time",
-        #     type=ArgumentType.datetime,
-		# 	action="append",
-		# 	#metavar="start_time",
-        #     help="Specify the start time UTC 2010-10-01T00:00:00 format.",
-        # )
-        # self.parser.add_argument(
-        #     "--end-time",
-        #     type=ArgumentType.datetime,
-		# 	action="append",
-		# 	#metavar="end_time",
-        #     help="Specify the end time UTC 2010-10-01T00:00:00 format.",
-        # )
+        self.parser.add_argument(
+            "--start-time",
+            type=ArgumentType.datetime,
+			action="append",
+			default=conf["specification"]["times"]["start"]
+			#metavar="start_time",
+            help="Specify the start time UTC 2010-10-01T00:00:00 format.",
+        )
+        self.parser.add_argument(
+            "--stop-time",
+            type=ArgumentType.datetime,
+			action="append",
+			default=conf["specification"]["times"]["stop"]
+			#metavar="end_time",
+            help="Specify the stop time UTC 2010-10-01T00:00:00 format.",
+        )
 
 
 
@@ -310,6 +312,9 @@ class Command(BaseCommand):
             measurements=[creation_class(**self._get_measurement_kwargs())],
             sources=[AtlasSource(**self._get_source_kwargs())],
             is_oneoff=self._is_oneoff
+			start_time = conf["specification"]["times"]["start"]
+			stop_time = conf["specification"]["times"]["stop"]
+
         ).create()
 
     def stream(self, pk, url):

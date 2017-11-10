@@ -106,8 +106,6 @@ class Configuration(UserSettingsParser):
                     "timeout": 4000,
                     "response-timeout": None,
                     "duplicate-timeout": None,
-					"start_time": None,
-					"stop_time": None,
                 },
                 "sslcert": {
                     "port": 443,

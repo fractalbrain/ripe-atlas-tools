@@ -121,19 +121,7 @@ class TracerouteMeasureCommand(Command):
             type=ArgumentType.integer_range(minimum=1, maximum=60000),
             help="Response timeout for one packet",
         )
-        specific.add_argument(
-            "--start-time",
-			default=spec["start_time"],
-            type=ArgumentType.datetime,
-            help="Specify the start time UTC 2010-10-01T00:00:00 format.",
-        )
-        specific.add_argument(
-            "--stop-time",
-			default=spec["stop_time"],
-            type=ArgumentType.datetime,
-            help="Specify the end time UTC 2010-10-01T00:00:00 format.",
-        )
-
+		
     def _get_measurement_kwargs(self):
 
         r = Command._get_measurement_kwargs(self)
