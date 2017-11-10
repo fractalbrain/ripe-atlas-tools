@@ -311,8 +311,8 @@ class Command(BaseCommand):
             user_agent=self.user_agent,
             measurements=[creation_class(**self._get_measurement_kwargs())],
             sources=[AtlasSource(**self._get_source_kwargs())],
-            is_oneoff=self._is_oneoff
-			start_time = conf["specification"]["times"]["start"]
+            is_oneoff=self._is_oneoff,
+			start_time = conf["specification"]["times"]["start"],
 			stop_time = conf["specification"]["times"]["stop"]
 
         ).create()
